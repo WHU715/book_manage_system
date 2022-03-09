@@ -1,0 +1,233 @@
+#work_place{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 搜索栏样式 */
+
+#search_box{
+    width: 1200px;
+    height: 210px;
+    min-width: 1200px;
+}
+
+/* 输入框样式 */
+
+#search_input input{
+    height: 20px;
+    outline-style: none ;
+    border: 3px solid #ccc; 
+    border-radius: 11px;
+    padding: 12px 14px;
+    float: left;
+    font-size: 18px;
+    
+}
+
+#search_input{
+    margin: 35px 0px 0px 50px;
+}
+
+#search_input p{
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 11px;
+    color: white;
+    font-weight: bold;
+    background-color: #3A68FF;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+#book_name_id, #book_author_type{
+    width: 960px;
+    height: 50px;
+}
+
+#book_name input{
+    width: 425px;
+}
+
+#book_name{
+    margin-right: 60px;
+}
+
+#book_id input{
+    width: 180px;
+}
+
+#book_author_type{
+    margin-top: 35px;
+}
+
+#book_author, #book_press{
+    margin-right: 40px;
+}
+
+#book_author input{
+    width: 200px;
+}
+
+
+#book_press input{
+    width: 150px;
+}
+
+#book_type select{
+    width: 100px;
+    height: 50px;
+    border: 3px solid #ccc; 
+    border-radius: 11px;
+    font-size: 17px;
+    text-align: center;
+}
+
+#type{
+    width: 90px;
+}
+
+/* 按钮样式 */
+
+#book_search_btn{
+    width: 125px;
+    height: 139px;
+    background-color: #3A68FF;
+    border: none ;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border-radius: 11px;
+    padding: 0px  0px  0px  0px;
+    margin: 33px 0px 0px 45px;
+    cursor: pointer;
+}
+
+#book_search_btn:hover{
+    background-color: #1f4eeb;
+}
+
+
+/* 列表模板 普通用户模式*/
+
+.table{
+    width: 1200px;
+    text-align: left;
+
+}
+
+/* 表头格式 */
+
+.table_head{
+    width: 1200px;
+    height: 40px;
+}
+
+.table_head div{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 5px;
+    font-weight: bold;
+    color: #969bac;
+}
+
+.table_head{
+    border-radius: 5px;
+    background-color: #E7F0FA;
+    margin: 20px auto;
+    box-shadow:0 6px 20px 3px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+    margin-bottom: 5px;
+}
+
+.head_num, .item_num{
+    width: 150px;
+}
+
+.head_title, .item_title{
+    width: 500px;
+}
+
+.head_author, .item_author{
+    width: 150px;
+}
+
+.head_press, .item_press{
+    width: 150px;
+}
+
+.head_year, .item_year{
+    width: 90px;
+}
+
+.head_type, .item_type{
+    width: 90px;
+}
+
+.item_num, .item_title, .item_author, .item_press, .item_year, .item_type{
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+}
+/* 表项格式 */
+
+.table_body{
+    width: 1200px;
+    height: auto;
+}
+
+.table_body .table_item div{
+    padding: 0px 5px;
+}
+
+.item_title{
+    font-weight: bold;
+}
+
+.table_item:hover{
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: height .4s;
+    box-shadow:0 0 10px 1px rgba(40, 119, 255, 0.486), 0 16px 24px 2px rgb(0 0 0 / 5%);
+
+}
+
+.table_item a{
+    color: black;
+}
+
+.table_item a:visited{
+    color: black;
+}
+
+/* 添加图书按键 */
+#add_book_btn{
+    width: 150px;
+    height: 50px;
+}
+#add_book_btn a{
+    float: left;
+    width: 150px;
+    height: 50px;
+    background-color: #3A68FF;
+    border: none ;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin: 5px 0px 15px 0px;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 11px;
+    box-shadow:0px 0px 5px 5px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+}
+
+#add_book_btn a:visited{
+    color: white;
+}
+
+#add_book_btn a:hover{
+    background-color: #1f4eeb;
+}

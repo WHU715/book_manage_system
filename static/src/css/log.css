@@ -1,0 +1,84 @@
+.log_box{
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow:0 6px 20px 5px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+}
+
+#wel, #id_input, #pwd_input, #log_btn, .log_form{
+    width: 356px;
+}
+
+#wel{
+    height: 180px;
+    text-align: center;
+    line-height: 150px;
+}
+
+#id_input input, #pwd_input input{
+    width: 328px;
+    height: 30px;
+    outline-style: none ;
+    background-color: #f5f6f7;
+    border: 0px;
+    border-radius: 5px;
+    padding: 14px 14px;
+    float: left;
+    font-size: 18px;
+}
+
+#id_input{
+    height: 58px;
+
+}
+
+#pwd_input{
+    height: 58px;
+    padding-top: 35px;
+}
+
+.log_form{
+    height: 200px;
+}
+
+
+#log_btn{
+    height: 58px;
+    text-align: center;
+    background-color: #3A68FF;
+    line-height: 58px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 40px;
+    color: white;
+    border: none;
+}
+
+#log_btn a{
+    color: white;
+}
+
+#log_btn:hover{
+    background-color: #1f4eeb;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+color: rgba(47,46,63,.45);
+}
+
+#err{
+    width: 365px;
+    height: 16px;
+    text-align: center;
+    color: red;
+    float: left;
+}
+
+#whu_logo{
+    height: 70px;
+    margin-top: 50px;
+}

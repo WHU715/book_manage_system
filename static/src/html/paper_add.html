@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珞珈图腾图书论文管理系统</title>
+
+    {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png'%}"/>
+    <link rel="stylesheet" href="{% static 'src/css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/paper_add.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/base.css'%}">
+
+</head>
+<body>
+    <div class="logoBar">
+        <a href="http://totemdb.whu.edu.cn/" target="_blank">
+            <img src="{% static 'img/logo.jpg' %}" alt="珞珈图腾数据库实验室">
+        </a>
+        <ul class="navigation">
+            <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+            <li><a href="../books"> 图 书 </a></li>
+            <li><a href="../papers"> 论 文 </a></li>
+        </ul>
+        <div class="log">
+            <a href={% url 'home' %}>个人中心</a><!--注意参数传递的?next与前面没有空格-->
+        </div>
+        <a href="" id="toCN">EN</a>
+    </div>
+
+    <div class="work_place">
+
+        <form action="/paper_add/" method="POST">
+            {% csrf_token %}
+        <div id="right_col">
+            <input type="submit" class="sub_iput " id="ens_btn" value="添加论文">
+        </div>
+        <div class="content">
+            <div id="paper_id">
+                <div class="title">论文ID：</div>
+                <span>{{paper_id}}</span>
+            </div>
+            <div id="paper_title">
+                <div class="title">标 题：</div>
+                <input type="text" name="paper_title_add">
+            </div>
+            <div id="paper_source">
+                <div class="title">出 处：</div>
+                <input type="text" name="paper_source_add">
+            </div>
+
+            <div id="paper_year">
+                <div class="title">年 限：</div>
+                <input type="text" name="paper_year_add">
+            </div>
+            <div id="paper_link">
+                <div class="title">链 接：</div>
+                <input type="text" name="paper_link_add">
+            </div>
+            <div id="paper_v_num">
+                <div class="title">卷 号：</div>
+                <input type="text" name="paper_volnum_add">
+            </div>
+            <div id="paper_p_num">
+                <div class="title">页 号：</div>
+                <input type="text" name="paper_pagen_add">
+            </div>
+            <div id="paper_page_cnt">
+                <div class="title">总页数：</div>
+                <input type="text" name="paper_pagenum_add">
+            </div>
+            <div id="paper_abstract">
+                <div id="abstract">摘 要：</div>
+                <textarea id="paper_abstract_upd" type="text" name="content" class="form-control"></textarea>
+            </div>
+
+        </div>
+        </form>
+        
+    </div>
+</body>
+</html>

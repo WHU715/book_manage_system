@@ -1,0 +1,147 @@
+.work_place{
+    margin: 0px auto;
+    width: 1200px;
+    height: 580px;
+    background-color: white;
+    margin-top: 120px;
+    border-radius: 15px;
+    box-shadow:0 6px 20px 5px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+}
+
+#paper_pic{
+    float: left;
+}
+
+.content{
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    margin-left: 350px;
+}
+
+.content>div{
+    width: 650px;
+    height: 35px;
+    margin-top: 3px;
+}
+
+#paper_id{
+    padding-top: 30px;
+}
+
+.title{
+    height: 35px;
+    width: 100px;
+    float: left;
+    line-height: 35px;
+
+}
+
+#paper_title>span{
+    height: 35px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#abstract{
+    height: 50px;
+    width: 100px;
+    
+    line-height: 50px;
+}
+
+.content span{
+    float: left;
+    line-height: 35px;
+
+}
+
+#abstract_content {
+    width: 530px;
+    height: 160px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#paper_pic{
+    width: 240px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 90px;
+    background-color: #bfa;
+    float: left;
+}
+
+.content input{
+    margin: auto;
+    height: 27px;
+    width: 400px;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    font-size: 14px;
+    padding-left: 6px;
+}
+
+#paper_abstract_upd{
+    height: 160px;
+    width: 530px;
+    resize: none;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+#ens_btn{
+
+    background-color: #3A68FF;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-top: 500px;
+}
+
+#ens_btn:hover{
+    background-color: #1f4eeb;
+}
+
+#right_col{
+    float: right;
+    margin-right: 40px;
+}
+
+#paper_upd_btn a{
+
+    float: right;
+    background-color: #3A68FF;
+    width: 180px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
+#paper_title{
+    width: 850px;
+}
+
+#paper_upd_btn:hover{
+    background-color: #1f4eeb;
+    color: white;
+}
+
+#paper_upd_btn a:visited{
+    color: white;
+}

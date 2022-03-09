@@ -1,0 +1,205 @@
+#work_place{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 搜索栏样式 */
+
+#search_box{
+    width: 1200px;
+    height: 210px;
+
+}
+
+/* 输入框样式 */
+
+.search_input{
+    padding: 0px  0px  0px  0px;
+    margin: 25px 0px 0px 0px;
+    
+}
+
+.search_input input{
+    height: 20px;
+    outline-style: none ;
+    border: 3px solid #ccc; 
+    border-radius: 11px;
+    padding: 14px 14px;
+    float: left;
+    font-size: 18px;
+    margin: 8px 0px;
+    
+}
+
+.paper_title div, .paper_key div, .paper_author div{
+    width: 90px;
+    height: 50px;
+    padding: 0px  0px  0px  0px;
+    margin: 10px 20px 0px 0px;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 50px;
+    float: left;
+    background-color: #3A68FF;
+    color:white;
+    text-align: center;
+    border-radius: 11px;
+}
+
+.paper_title, .paper_author_key{
+    height: 70px;
+    line-height: 70px;
+}
+
+
+.paper_title input{
+    width: 795px;
+}
+
+.paper_author input, .paper_key input{
+    width: 300px;
+}
+
+.paper_author_key{
+    width: 1000px;
+    height: 70px;
+}
+
+.paper_author, .paper_key, .paper_title{
+    padding: 0px  0px  0px  0px;
+    margin: 0px 9px 16px 41px;
+}
+
+/* 按钮样式 */
+
+.search_btn{
+    width: 125px;
+    height: 139px;
+    background-color: #3A68FF;
+    border: none ;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.search_btn:hover{
+    background-color: #1f4eeb;
+}
+
+#paper_search_btn{
+    margin: 33px 0px 0px 33px;
+}
+
+/* 列表模板 */
+
+
+
+.table{
+    width: 1200px;
+    text-align: left;
+
+}
+
+/* 表头格式 */
+
+.table_head{
+    width: 1200px;
+    height: 40px;
+}
+
+.table_head div{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 5px;
+    font-weight: bold;
+    color: #969bac;
+}
+
+.table_head{
+    border-radius: 5px;
+    background-color: #E7F0FA;
+    margin: 20px auto;
+    box-shadow:0 6px 20px 3px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+    margin-bottom: 5px;
+}
+
+.head_num, .item_num{
+    width: 140px;
+}
+
+.head_title, .item_title{
+    width: 620px;
+}
+
+.head_author, .item_author{
+    width: 150px;
+}
+
+.head_origin, .item_origin{
+    width: 140px;
+}
+
+.head_year, .item_year{
+    width: 85px;
+}
+
+.item_num, .item_title, .item_author, .item_origin, .item_year, .item_link{
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+}
+/* 表项格式 */
+
+.table_body{
+    width: 1200px;
+    height: auto;
+}
+
+.table_body .table_item div{
+    padding: 0px 5px;
+}
+
+.item_title{
+    font-weight: bold;
+}
+
+.table_item:hover{
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+    transition: height .4s;
+    box-shadow:0 0 10px 1px rgba(40, 119, 255, 0.486), 0 16px 24px 2px rgb(0 0 0 / 5%);
+
+}
+
+.table_item a{
+    color: black;
+}
+
+.table_item a:visited{
+    color: black;
+}
+
+/* 添加论文按钮 */
+#add_paper_btn{
+    width: 150px;
+    height: 50px;
+}
+#add_paper_btn a{
+    float: left;
+    width: 150px;
+    height: 50px;
+    background-color: #3A68FF;
+    border: none ;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin: 5px 0px 15px 0px;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 11px;
+    box-shadow:0px 0px 5px 5px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+}

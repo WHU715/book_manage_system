@@ -1,0 +1,162 @@
+.work_place{
+    margin: 0px auto;
+    width: 1200px;
+    height: 580px;
+    background-color: white;
+    margin-top: 120px;
+    border-radius: 15px;
+    box-shadow:0 6px 20px 5px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+}
+
+#book_pic{
+    float: left;
+}
+
+.content{
+    width: 650px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.content>div{
+    width: 820px;
+    height: 35px;
+    margin-left: 100px;
+    margin-top: 3px;
+}
+
+#book_id{
+    padding-top: 30px;
+}
+
+.title{
+    height: 35px;
+    width: 100px;
+    float: left;
+    line-height: 35px;
+
+}
+
+#abstract{
+    height: 50px;
+    width: 100px;
+    
+    line-height: 50px;
+}
+
+.content span{
+    float: left;
+    line-height: 35px;
+
+}
+
+#abstract_content {
+    width: 530px;
+    height: 160px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#book_pic{
+    width: 240px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 90px;
+    background-color: #bfa;
+    float: left;
+}
+
+.content input{
+    margin: auto;
+    height: 27px;
+    width: 260px;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    font-size: 14px;
+    padding-left: 6px;
+}
+
+#book_abstract_upd{
+    height: 160px;
+    width: 450px;
+    resize: none;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+#ens_btn{
+
+    background-color: #3A68FF;
+    width: 180px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 50px;
+    cursor: pointer;
+    margin-top: 470px;
+}
+
+#ens_btn:hover{
+    background-color: #1f4eeb;
+}
+
+#book_dele{
+    text-align: center;
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: white;
+    display: block;
+}
+
+#right_col{
+    float: right;
+    margin-right: 40px;
+}
+
+#book_upd_btn a{
+    float: right;
+    background-color: #3A68FF;
+    width: 180px;
+    height: 50px;    
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+#book_upd_btn a:hover, #book_borrow_btn:hover{
+    background-color: #1f4eeb;
+}
+
+#book_upd_btn a:visited{
+    color: white;
+}
+#book_dele{
+    position: fixed;
+    right:260px;
+    top:630px;
+}
+#book_borrow_btn{
+    float: right;
+    background-color: #3A68FF;
+    width: 180px;
+    height: 50px;    
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 40px;
+}

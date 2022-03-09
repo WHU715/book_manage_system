@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珞珈图腾图书论文管理系统</title>
+
+    {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png'%}"/>
+    <link rel="stylesheet" href="{% static 'src/css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/paper_detail.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/base.css'%}">
+
+</head>
+<body>
+    <div class="logoBar">
+        <a href="http://totemdb.whu.edu.cn/" target="_blank">
+            <img src="{% static 'img/logo.jpg' %}" alt="珞珈图腾数据库实验室">
+        </a>
+        <ul class="navigation">
+            <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+            <li><a href="../books"> 图 书 </a></li>
+            <li><a href="../papers"> 论 文 </a></li>
+        </ul>
+
+{#    判断当前登陆状态决定右上角显示个人中心或登录#}
+        {% if login_statu %}
+            <div class="log">
+                <a href={% url 'home' %}>个人中心</a><!--注意参数传递的?next与前面没有空格-->
+            </div>
+        {% else %}
+        <div class="log">
+            <a href={% url 'login' %}?next_url={{ next_url }}>登录</a><!--注意参数传递的?next与前面没有空格-->
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="work_place">
+        <div id="paper_pic">
+            我是封面
+        </div>
+
+{#        如果是管理员#}
+        {% if login_statu %}
+        {% if admin_statu %}
+        <div id="paper_upd_btn"><a href={% url 'paper_op' %}?paper_id={{ paper_id }} target="_blank">修改论文信息</a></div>
+        {% endif %}
+        {% endif %}
+
+
+        <div class="content">
+            <div id="paper_id">
+                <div class="title">论文ID：</div>
+                <span>{{ paper_info.id }}</span>
+            </div>
+            <div id="paper_title">
+                <div class="title">标 题：</div>
+                <span>{{ paper_info.title }}</span>
+            </div>
+            <div id="paper_source">
+                <div class="title">出 处：</div>
+                <span>{{ paper_info.source }}</span>
+            </div>
+            <div id="paper_year">
+                <div class="title">年 限：</div>
+                <span>{{ paper_info.year }}</span>
+            </div>
+            <div id="paper_link">
+                <div class="title">链 接：</div>
+                <span>{{ paper_info.link }}</span>
+            </div>
+            <div id="paper_v_num">
+                <div class="title">卷 号：</div>
+                <span>{{ paper_info.volnum }}</span>
+            </div>
+            <div id="paper_p_num">
+                <div class="title">页 号：</div>
+                <span>{{ paper_info.pagen }}</span>
+            </div>
+            <div id="paper_page_cnt">
+                <div class="title">总页数：</div>
+                <span>{{ paper_info.pagenum }}</span>
+            </div>
+            <div id="paper_abstract">
+                <div id="abstract">摘 要：</div>
+                <div id="abstract_content">{{ paper_info.abstract }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

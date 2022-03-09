@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珞珈图腾图书论文管理系统</title>
+
+    {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png'%}"/>
+    <link rel="stylesheet" href="{% static 'src/css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/book_add.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/base.css'%}">
+
+</head>
+
+
+<body>
+    <div class="logoBar">
+        <a href="http://totemdb.whu.edu.cn/" target="_blank">
+            <img src="{% static 'img/logo.jpg' %}" alt="珞珈图腾数据库实验室">
+        </a>
+        <ul class="navigation">
+            <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+            <li><a href="../books"> 图 书 </a></li>
+            <li><a href="../papers"> 论 文 </a></li>
+        </ul>
+        <div class="log">
+            <a href={% url 'home' %}>个人中心</a><!--注意参数传递的?next与前面没有空格-->
+        </div>
+        <a href="" id="toCN">EN</a>
+    </div>
+    
+    <div class="work_place">
+        <form action="/book_add/" method="POST">
+            {% csrf_token %}
+        <div id="right_col">
+            <input type="submit" class="sub_iput fl" id="ens_btn" value="添加图书">
+        </div>
+        <div class="content">
+            <div id="book_id">
+                <div class="title">书籍ID：</div>
+                <span>系统自动生成</span>
+            </div>
+            <div id="book_name">
+                <div class="title">书 名：</div>
+                <input type="text" name="book_title_add">
+            </div>
+            <div id="ISBN">
+                <div class="title">ISBN：</div>
+                <input type="text" name="book_isbn_add">
+            </div>
+            <div id="book_type">
+                <div class="title">类 型：</div>
+                <input type="text" name="book_type_add">
+            </div>
+            <div id="book_press">
+                <div class="title">出版社：</div>
+                <input type="text" name="book_press_add">
+            </div>
+            <div id="book_date">
+                <div class="title">出版日期：</div>
+                <input type="text" name="book_year_add">
+            </div>
+            <div id="book_page_cnt">
+                <div class="title">总页数：</div>
+                <input type="text" name="book_pagenum_add">
+            </div>
+            <div id="book_pic">
+                <div class="title">封面链接：</div>
+                <input type="text" name="book_picture_add">
+            </div>
+            <div id="book_abstract">
+                <div id="abstract">摘 要：</div>
+                <textarea id="book_abstract_upd" type="text" name="content" class="form-control"></textarea>
+            </div>
+
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珞珈图腾图书论文管理系统</title>
+
+    {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png'%}"/>
+    <link rel="stylesheet" href="{% static 'src/css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/paper.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/base.css'%}">
+
+</head>
+<body>
+    <div class="logoBar">
+        <a href="http://totemdb.whu.edu.cn/" target="_blank">
+            <img src="{% static 'img/logo.jpg' %}" alt="珞珈图腾数据库实验室">
+        </a>
+        <ul class="navigation">
+            <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+            <li><a href="../books"> 图 书 </a></li>
+            <li><a href="../papers"> 论 文 </a></li>
+        </ul>
+
+        <div class="log">
+            <a href="../login">登 录</a>#}
+            <a href={% url 'login' %}?next_url={{ next_url }}>登录</a><!--注意参数传递的?next与前面没有空格-->
+        </div>
+        <h1>您不是管理员，请访问其他页面</h1>
+
+    </div>
+
+    </div>
+
+</body>
+</html>

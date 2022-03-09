@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>珞珈图腾图书论文管理系统</title>
+
+        {% load static %}
+        <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png' %}"/>
+        <link rel="stylesheet" href="{% static 'src/css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'src/css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'src/css/log.css' %}">
+    </head>
+
+    <body>
+        <div class="logoBar">
+            <a href="http://totemdb.whu.edu.cn/" target="_blank">
+                <img src="{% static 'img/logo.jpg'%}" alt="珞珈图腾数据库实验室">
+            </a>
+            <ul class="navigation">
+                <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+                <li><a href="../books"> 图 书 </a></li>
+                <li><a href="../papers"> 论 文 </a></li>
+            </ul>
+            <a href="../login" id="toCN">EN</a>
+        </div>
+
+        <div class="holder"></div>
+
+        <div class="log_box m">
+            <div class="m" id="wel"><img src="{% static 'img/whulogo.png'%}"  id="whu_logo" ></div>
+
+
+            <div class="log_form m">
+                <form action="/login/" method="post">
+                {% csrf_token %}
+                <div id="id_input" class="m">
+                    <input type="text" class="m"  placeholder="用户账号" name="username">
+                </div>
+                <div id="pwd_input" class="m">
+                    <input type="password" class="m" placeholder="密码" name="password">
+                </div>
+                <div style="display: none;">
+                    <input id="next" type="text" name="next_url" value="{{ next_url }}" />
+                </div>
+
+                    <div id="err">
+                        {% if psw_false %}
+                        用户名或密码错误，请重新输入
+                        {% endif %}
+                    </div>
+
+                <div>
+                    <input type="submit" id="log_btn" class="m" value="登 录">
+                </div>
+            </form>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

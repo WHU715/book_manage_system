@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珞珈图腾图书论文管理系统</title>
+
+    {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png'%}"/>
+    <link rel="stylesheet" href="{% static 'src/css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/paper.css'%}">
+    <link rel="stylesheet" href="{% static 'src/css/base.css'%}">
+
+</head>
+<body>
+    <div class="logoBar">
+        <a href="http://totemdb.whu.edu.cn/" target="_blank">
+            <img src="{% static 'img/logo.jpg' %}" alt="珞珈图腾数据库实验室">
+        </a>
+        <ul class="navigation">
+            <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+            <li><a href="../books"> 图 书 </a></li>
+            <li><a href="../papers"> 论 文 </a></li>
+        </ul>
+
+{#    判断当前登陆状态决定右上角显示个人中心或登录#}
+        {% if login_statu %}
+            <div class="log">
+                <a href={% url 'home' %}>个人中心</a><!--注意参数传递的?next与前面没有空格-->
+            </div>
+        {% else %}
+        <div class="log">
+{#            <a href="../login">登 录</a>#}
+            <a href={% url 'login' %}?next_url={{ next_url }}>登录</a><!--注意参数传递的?next与前面没有空格-->
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="holder"></div>
+    <div id="work_place">
+    <div class="back_plate" id="search_box">
+        <form action="/papers/" method="POST">
+            {% csrf_token %}
+        <div class="search_input fl">
+
+
+            <div  class="paper_title">
+                <div>标 题</div>
+                <input type="text" placeholder="请输入论文标题" name="q_title">
+            </div>
+
+            <div class="paper_author_key">
+                <div  class="paper_author fl">
+                    <div class="fl">作 者</div>
+                    <input type="text" placeholder="请输入论文作者" class="fl" name="q_author">
+                </div>
+                <div  class="paper_key fl">
+                    <div class="fl">来 源</div>
+                    <input type="text" placeholder="请输入论文来源" class="fl" name="q_source">
+                </div>
+            </div>
+        </div>
+{#            #}
+{#        <button class="search_btn">#}
+{#            搜 索#}
+{#        </button> #}
+<input type="submit" class="m sub_iput search_btn" id="paper_search_btn" value="搜 索">
+
+        </form>
+    </div>
+
+        {% if admin_statu %}
+    <div id="add_paper_btn">
+            <a href="../paper_add" target="_blank">+ 添加论文</a>
+    </div>
+        {% endif %}
+
+    <div class="table m">
+        <div class="table_head">
+            <div class="head_num">ID</div>
+            <div class="head_title">标 题</div>
+            <div class="head_author">作 者</div>
+            <div class="head_origin">出 处</div>
+            <div class="head_year">年 限</div>
+        </div>
+
+        <div class="table_body">
+
+            {% for paper in context.page_obj %}
+                <div class="table_item">
+                <a href={% url 'paper_detail' %}?paper_id={{ paper.id }} target="_block">
+                <div class="item_num">{{ paper.id }}</div>
+                <div class="item_title">{{ paper.title }}</div>
+                <div class="item_author">{{ paper.author }}</div>
+                <div class="item_origin">{{ paper.source }}</div>
+                <div class="item_year">{{ paper.year }}</div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+    <div class="end">
+
+    </div>
+
+</body>
+</html>

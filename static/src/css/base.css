@@ -1,0 +1,159 @@
+body{
+    margin: 0, auto;
+    background-color: #f3f6fa;
+}
+
+.m{
+    margin: 0 auto;    
+}
+
+.fl{
+    float: left;
+}
+
+a{
+    text-decoration: none;
+}
+
+.back_plate{
+    background-color: #E7F0FA;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow:0 6px 6px 1px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+}
+
+.table_item{
+    width: 1200px;
+    height: 100px;
+    border-radius: 7px;
+    background-color: white;
+    margin: 5px auto;
+    box-shadow:0px 2px 2px 2px rgb(40 120 255 / 10%), 0 16px 24px 2px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    /* line-height: 100px; */
+    transition: height 0s;
+}
+
+.end{
+    height: 100px;
+}
+
+
+/* 导航栏样式 */
+
+.logoBar{
+    /* background-color: rgb(187, 255, 204); */
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    min-width: 1519px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgb(29 41 57 / 8%);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.holder{
+    width: 100%;
+    height: 100px;
+}
+
+.logoBar img{
+    float: left;
+    margin: 0 50px;
+    padding: 0 40px;
+    background-color: white;
+    margin-right: 195px;
+    height: 100px;
+}
+
+.logoBar .navigation,.logoBar .navigation li {
+    float: left;
+    height: 100%;
+}
+
+.logoBar .navigation a{
+    float: left;
+    color: black;
+    height: 100%;
+    padding: 0px 65px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.logoBar .navigation a:visited{
+    color:black;
+}
+.logoBar .navigation a:hover{
+    background-color: #ebedf5;
+    color:#3A68FF;
+}
+
+
+.logoBar .log{
+    float: left;
+    width: 120px; 
+    padding: 25px 0px;
+    padding-left: 30px;
+}
+
+.log a{
+    background-color: #3A68FF;
+    border-radius: 15px;
+    color: white;
+    display: block;
+    line-height: 48px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.log a:hover{
+    background-color: #1f4eeb;
+}
+
+#toEN{
+    margin-left: 70px;
+    color: #ccc;
+}
+
+#toEN:hover{
+    margin-left: 70px;
+    color: #969bac;
+}
+
+/* 英文页面padding设置 */
+#intro_en a, #books_en a, #papers_en a{
+    padding: 0px 46px;
+}
+#toCN{
+    margin-left: 70px;
+    color: #ccc;
+}
+#toCN:hover{
+    margin-left: 70px;
+    color: #969bac;
+}
+
+.sub_iput{
+    border: none;
+    background-color: #3A68FF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sub_iput:hover{
+    background-color: #1f4eeb;
+}
+
+.delete{
+    border: none;
+    background-color: none;
+    color: rgb(163, 162, 162);
+    cursor: pointer;
+}
+
+.delete:hover{
+    color:rgb(214, 4, 4);
+}

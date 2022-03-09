@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珞珈图腾图书论文管理系统</title>
+
+    {% load static %}
+    <link rel="icon" type="image/x-ico" href="{% static 'img/icon.png' %}"/>
+    <link rel="stylesheet" href="{% static 'src/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'src/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'src/css/base.css' %}">
+
+</head>
+
+<body>
+    <div class="logoBar">
+        <a href="http://totemdb.whu.edu.cn/" target="_blank">
+            <img src="{% static 'img/logo.jpg'%}" alt="珞珈图腾数据库实验室">
+        </a>
+        <ul class="navigation">
+            <li><a href="http://totemdb.whu.edu.cn/"> 概 况 </a></li>
+            <li><a href="../books"> 图 书 </a></li>
+            <li><a href="../papers"> 论 文 </a></li>
+        </ul>
+        <div class="log">
+            <a href="../home">个人中心</a>
+        </div>
+
+        <a href="" id="toCN">EN</a>
+    </div>
+
+    <div class="holder"></div>
+
+    <div id="item">
+        <div id="head_wrapper" class="fl">
+            <div id="tool_list">
+                <div id="profile">个 人 信 息</div>
+                <div id="my_book">我 的 图 书</div>
+            </div>
+            <form action="/logout/" method="POST">
+                {% csrf_token %}
+            <input type="submit" class="sub_iput " id="quit" value="退 出 登 录">
+            </form>
+
+        </div>
+
+        <div id="work_space">
+            <!-- 个人信息修改面板 -->
+            <div class="profile_back" id="profile_upd_box">
+                <div class="back" id="profile_upd_back">&lt 返回</div>
+                <div id="profile_upd">
+                    <form action="/home_user/" method="POST">
+                        {% csrf_token %}
+                    <div id="holder">
+                        <div>
+                            个人信息修改
+                        </div>
+                    </div>
+                    <div id="id_col">
+                        <div>用户ID</div>
+                        <span>{{ profile.userid }}</span>
+                    </div>
+
+                    <div id="name_col">
+                        <div>用户名</div>
+                        <input type="text" name="username4user">
+                    </div>
+
+                    <div id="pwd_col">
+                        <div>新密码</div>
+                        <input type="password" name="new_psw14user">
+                    </div>
+
+                    <div id="pwd_ens">
+                        <div>确认密码</div>
+                        <input type="password" name="new_psw24user">
+                    </div>
+
+                    <div style="display: none;">
+                        <input id="userid4user" type="text" name="userid4user" value="{{ profile.userid }}" />
+                    </div>
+
+                    <input type="submit" class="sub_iput fl ens_upd_btn" id="profile_upd_btn" value="确认修改">
+                    </form>
+                </div>
+            </div>
+
+            <!-- 个人信息展示面板 -->
+            <div class="profile_back" id="profile_content_box">
+                <div id="profile_content">
+                    <div id="holder">
+                        <div>
+                            个人信息
+                        </div>
+                    </div>
+                    <div id="id_col">
+                        <div>用户ID</div>
+                        <span>{{ profile.userid }}</span>
+                    </div>
+
+                    <div id="name_col">
+                        <div>用户名</div>
+                        <span>{{ profile.username }}</span>
+                    </div>
+                    <div id="type_col">
+                        <div>身份</div>
+                        <span>{{ profile.type }}</span>
+                    </div>
+                    <div class="to_upd_btn" id="profile_to_upd_btn">修改信息</div>
+                </div>
+            </div>           
+
+            <!-- 图书列表 -->
+
+            <div class="default_back" id="book_list">
+                <!-- 搜索框 -->
+                <!-- <div class="back_plate" id="search_box">
+                    <div class="fl" id="search_input">
+                        <div id="book_name_id">
+                            <div id="book_name" class="fl">
+                                <p class="fl">书 名</p>
+                                <input type="text" class="fl" placeholder="请输入书籍名称">
+                            </div>
+                            <div id="book_id" class="fl">
+                                <p class="fl">书 号</p>
+                                <input type="text" class="fl" placeholder="请输入书籍编号">
+                            </div>
+                        </div>
+
+                        <div id="book_author_type">
+                            <div id="book_author" class="fl">
+                                <p class="fl">作 者</p>
+                                <input type="text" class="fl" placeholder="请输入书籍作者">
+                            </div>
+                            <div id="book_press" class="fl">
+                                <p class="fl">出版社</p>
+                                <input type="text" class="fl" placeholder="请输入书籍出版社">
+                            </div>
+                            <div id="book_type" class="fl">
+                                <p class="fl">类 型</p>
+                                <select name="" id="" class="fl">
+                                    <option value="">计算机</option>
+                                    <option value="">数 理</option>
+                                    <option value="">哲 学</option>
+                                    <option value="">文 学</option>
+                                    <option value="">军 事</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="search_btn fl" value="搜 索"></input>
+                </div> -->
+
+                <div id="table">
+                    <div id="table_book_head">
+                        <div id="head_book_id">书 号</div>
+                        <div id="head_book_name">书 名</div>
+                        <div id="head_book_author">作 者</div>
+                        <div id="head_book_type">类 型</div>
+                        <div id="head_book_date">借出时间</div>
+                        <div id="head_book_op">操 作</div>
+                    </div>
+                </div>
+
+                {% for book in borrow_list %}
+                <div class="table_item_hm">
+                    <div class="item_book_id">{{ book.id }}</div>
+                    <div class="item_book_name">{{ book.name }}book.name</div>
+                    <div class="item_book_author">{{ book.author }}</div>
+                    <div class="item_book_type">{{ book.type }}</div>
+                    <div class="item_book_date">{{ book.year }}</div>
+                    <div class="item_book_op">
+                        <form action="/home_user/" method="POST">
+                        {% csrf_token %}
+                        <div style="display: none;">
+                            <input id="userid4admin" type="text" name="userid4user" value="{{ profile.userid }}" />
+                            <input id="book_id_return" type="text" name="book_id_return" value={{book.id  }} />
+                        </div>
+                        <input type="submit" id="book_op" value="还 书"></input>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+
+    </div>
+    <script type="text/javascript" language="javascript">
+        var profile_content_box = document.getElementById("profile_content_box");
+        var profile_upd_box = document.getElementById("profile_upd_box");
+
+        var book_list = document.getElementById("book_list");
+
+        function hide_all() {
+            profile_content_box.style.display = "none";
+            profile_upd_box.style.display = "none";
+            book_list.style.display = "none";
+        }
+
+        window.onload = function () {
+            hide_all();
+            var display = {{ box_index | safe }};
+            {#var admin_statu = {{ admin | safe }};#}
+            
+            switch (display) {
+                case 0: /* 个人信息 */
+                    profile_content_box.style.display = "block";
+                    break;
+                /* 管理员看到的个人信息 */
+                /* case 1: 
+                    profile_content_box_mana.style.display = "block";
+                    break; */
+                case 2: /* 书籍列表 */
+                    book_list.style.display = "block";
+                    break;
+                /* 用户列表 */
+                /*
+                case 3: 
+                    mem_list.style.display = "block";
+                    break;
+                */
+                default:
+                    profile_content_box.style.display = "block";
+                    break;
+            }
+
+        }           
+    </script>
+    <script type="text/javascript" src="{% static 'src/js/home_usr.js' %}"></script>
+
+</body>
+
+</html>
