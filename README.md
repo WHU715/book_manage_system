@@ -6,7 +6,7 @@ WHU2022
 
 1、首先安装运行所需环境
 ```python
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 2、运行
